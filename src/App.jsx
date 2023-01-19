@@ -6,17 +6,17 @@ import './App.scss';
 import "swiper/css";
 import 'swiper/css/pagination';
 
-import Img1 from './assets/Abandoned_All.png';
-import Img2 from './assets/Abandoned_All_Studio.png';
-import Img3 from './assets/Abandoned_Closeup_1.png';
-import Img4 from './assets/Abandoned_Closeup_2.png';
-import Img5 from './assets/Abandoned_Closeup_3.png';
+import Img1 from './assets/Abandoned_All.webp';
+import Img2 from './assets/Abandoned_All_Studio.webp';
+import Img3 from './assets/Abandoned_Closeup_1.webp';
+import Img4 from './assets/Abandoned_Closeup_2.webp';
+import Img5 from './assets/Abandoned_Closeup_3.webp';
 
-import Img6 from './assets/Mixed_All.png';
-import Img7 from './assets/Mixed_All_Studio.png';
-import Img8 from './assets/Mixed_Closeup_1.png';
-import Img9 from './assets/Mixed_Closeup_2.png';
-import Img10 from './assets/Mixed_Closeup_3.png';
+import Img6 from './assets/Mixed_All.webp';
+import Img7 from './assets/Mixed_All_Studio.webp';
+import Img8 from './assets/Mixed_Closeup_1.webp';
+import Img9 from './assets/Mixed_Closeup_2.webp';
+import Img10 from './assets/Mixed_Closeup_3.webp';
 
 function App() {
 

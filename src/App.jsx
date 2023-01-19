@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import { Pagination, Mousewheel } from 'swiper';
 
 import './App.scss';
 
@@ -32,9 +32,12 @@ function App() {
         </h2>
 
         <Swiper className="mySwiper" 
-          modules={[Pagination]} 
+          modules={[Pagination, Mousewheel]} 
           pagination={{clickable: true}}
           thumbs={true}
+          mousewheel = {{
+            forceToAxis: true
+          }}
           >
           <SwiperSlide>
             <img src={Img1} />
@@ -50,9 +53,12 @@ function App() {
         </p>
 
         <Swiper className="mySwiper space" 
-          modules={[Pagination]} 
+          modules={[Pagination, Mousewheel]} 
           pagination={{clickable: true}}
           thumbs={true}
+          mousewheel = {{
+            forceToAxis: true
+          }}
           >
           <SwiperSlide>
             <img src={Img3} />
@@ -78,9 +84,12 @@ function App() {
         <h2>Mixed Pack</h2>
 
         <Swiper className="mySwiper" 
-          modules={[Pagination]} 
+          modules={[Pagination, Mousewheel]} 
           pagination={{clickable: true}}
           thumbs={true}
+          mousewheel = {{
+            forceToAxis: true
+          }}
           >
           <SwiperSlide>
             <img src={Img6} />
@@ -96,9 +105,12 @@ function App() {
         </p>
 
         <Swiper className="mySwiper space" 
-          modules={[Pagination]} 
+          modules={[Pagination, Mousewheel]} 
           pagination={{clickable: true}}
           thumbs={true}
+          mousewheel = {{
+            forceToAxis: true
+          }}
           >
           <SwiperSlide>
             <img src={Img8} />

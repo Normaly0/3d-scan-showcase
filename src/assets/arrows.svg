@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 480">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m96,192h-32v32h32v-32Zm32-32h-32v32h32v-32Zm32-32h-32v32h32v-32Zm32-32h-32v32h32v-32Zm32-32h-32v32h32v-32Zm32-32h-32v32h32v-32ZM288,0h-32v32h32V0Zm-32,480h32v-32h-32v32Zm-32-32h32v-32h-32v32Zm-32-32h32v-32h-32v32Zm-32-32h32v-32h-32v32Zm-32-32h32v-32h-32v32Zm-32-32h32v-32h-32v32Zm-32-32h32v-32h-32v32Zm0-64h-32v32h32v-32Z"/>
+  <path d="m64,224h-32v-32h32v32Zm64-32h-32v32h32v-32Zm-32-32h-32v32h32v-32Zm64,0h-32v32h32v-32Zm-32-32h-32v32h32v-32Zm64,0h-32v32h32v-32Zm-32-32h-32v32h32v-32Zm64,0h-32v32h32v-32Zm-32-32h-32v32h32v-32Zm64,0h-32v32h32v-32Zm-32-32h-32v32h32v-32Zm64,0h-32v32h32v-32ZM256,0h-32v32h32V0Zm64,0h-32v32h32V0Zm-32,480h32v-32h-32v32Zm-64,0h32v-32h-32v32Zm32-32h32v-32h-32v32Zm-64,0h32v-32h-32v32Zm32-32h32v-32h-32v32Zm-64,0h32v-32h-32v32Zm32-32h32v-32h-32v32Zm-64,0h32v-32h-32v32Zm32-32h32v-32h-32v32Zm-64,0h32v-32h-32v32Zm32-32h32v-32h-32v32Zm-64,0h32v-32h-32v32Zm32-32h32v-32h-32v32Zm-64,0h32v-32h-32v32Zm0-64H0v32h32v-32Zm64,0h-32v32h32v-32Z"/>
+</svg>

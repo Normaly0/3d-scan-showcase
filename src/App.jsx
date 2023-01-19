@@ -1,10 +1,11 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Mousewheel } from 'swiper';
+import { Pagination, Mousewheel, Navigation } from 'swiper';
 
 import './App.scss';
 
 import "swiper/css";
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import Img1 from './assets/Abandoned_All.webp';
 import Img2 from './assets/Abandoned_All_Studio.webp';
@@ -32,12 +33,13 @@ function App() {
         </h2>
 
         <Swiper className="mySwiper" 
-          modules={[Pagination, Mousewheel]} 
+          modules={[Pagination, Mousewheel, Navigation]} 
           pagination={{clickable: true}}
           thumbs={true}
           mousewheel = {{
             forceToAxis: true
           }}
+          navigation={true}
           >
           <SwiperSlide>
             <img src={Img1} />
@@ -53,12 +55,13 @@ function App() {
         </p>
 
         <Swiper className="mySwiper space" 
-          modules={[Pagination, Mousewheel]} 
+          modules={[Pagination, Mousewheel, Navigation]} 
           pagination={{clickable: true}}
           thumbs={true}
           mousewheel = {{
             forceToAxis: true
           }}
+          navigation={true}
           >
           <SwiperSlide>
             <img src={Img3} />
@@ -84,12 +87,13 @@ function App() {
         <h2>Mixed Pack</h2>
 
         <Swiper className="mySwiper" 
-          modules={[Pagination, Mousewheel]} 
+          modules={[Pagination, Mousewheel, Navigation]} 
           pagination={{clickable: true}}
           thumbs={true}
           mousewheel = {{
             forceToAxis: true
           }}
+          navigation={true}
           >
           <SwiperSlide>
             <img src={Img6} />
@@ -105,12 +109,13 @@ function App() {
         </p>
 
         <Swiper className="mySwiper space" 
-          modules={[Pagination, Mousewheel]} 
+          modules={[Pagination, Mousewheel, Navigation]} 
           pagination={{clickable: true}}
           thumbs={true}
           mousewheel = {{
             forceToAxis: true
           }}
+          navigation={true}
           >
           <SwiperSlide>
             <img src={Img8} />

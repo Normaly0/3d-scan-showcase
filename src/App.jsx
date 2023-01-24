@@ -19,7 +19,18 @@ import Img8 from './assets/Mixed_Closeup_1.webp';
 import Img9 from './assets/Mixed_Closeup_2.webp';
 import Img10 from './assets/Mixed_Closeup_3.webp';
 
+import Click from './assets/click.mp3';
+
 function App() {
+
+  function clickSound() {
+
+    if (window.innerWidth < 600) return
+
+    const clickSound = new Audio(Click)
+    clickSound.volume = 0.5;
+    clickSound.play();
+  }
 
   return (
     <main className="App">
@@ -40,6 +51,7 @@ function App() {
             forceToAxis: true
           }}
           navigation={true}
+          onRealIndexChange={clickSound}
           >
           <SwiperSlide>
             <img src={Img1} />
@@ -62,6 +74,7 @@ function App() {
             forceToAxis: true
           }}
           navigation={true}
+          onRealIndexChange={clickSound}
           >
           <SwiperSlide>
             <img src={Img3} />
@@ -84,7 +97,7 @@ function App() {
 
       <section className="mixed">
 
-        <h2>Mixed Pack</h2>
+        <h2>The Mixed Bunch</h2>
 
         <Swiper className="mySwiper" 
           modules={[Pagination, Mousewheel, Navigation]} 
@@ -94,6 +107,7 @@ function App() {
             forceToAxis: true
           }}
           navigation={true}
+          onRealIndexChange={clickSound}
           >
           <SwiperSlide>
             <img src={Img6} />
@@ -116,6 +130,7 @@ function App() {
             forceToAxis: true
           }}
           navigation={true}
+          onRealIndexChange={clickSound}
           >
           <SwiperSlide>
             <img src={Img8} />

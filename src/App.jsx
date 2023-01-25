@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Mousewheel, Navigation } from 'swiper';
 
@@ -23,6 +24,8 @@ import Click from './assets/click.mp3';
 
 function App() {
 
+  const [loading, setLoading] = useState(true);
+
   function clickSound() {
 
     if (window.innerWidth < 600) return
@@ -33,125 +36,140 @@ function App() {
   }
 
   return (
-    <main className="App">
-      
-      <h1>Photogrammetry Adventures!</h1>
+    <>
 
-      <section className="abandoned">
-        
-        <h2>
-          The Abandonment Pack
-        </h2>
+      {
+        loading
+          ? 
+          <main>
+            <div className="loading">
+              <p>Loading</p>
+            </div>
+          </main>
+          : 
+          <main className="App">
 
-        <Swiper className="mySwiper" 
-          modules={[Pagination, Mousewheel, Navigation]} 
-          pagination={{clickable: true}}
-          thumbs={true}
-          mousewheel = {{
-            forceToAxis: true
-          }}
-          navigation={true}
-          onRealIndexChange={clickSound}
-          >
-          <SwiperSlide>
-            <img src={Img1} />
-          </SwiperSlide>
+            <h1>Photogrammetry Adventures!</h1>
 
-          <SwiperSlide>
-            <img src={Img2} />
-          </SwiperSlide>
-        </Swiper>
+            <section className="abandoned">
 
-        <p className="caption">
-          Close Ups
-        </p>
+              <h2>
+                The Abandonment Pack
+              </h2>
 
-        <Swiper className="mySwiper space" 
-          modules={[Pagination, Mousewheel, Navigation]} 
-          pagination={{clickable: true}}
-          thumbs={true}
-          mousewheel = {{
-            forceToAxis: true
-          }}
-          navigation={true}
-          onRealIndexChange={clickSound}
-          >
-          <SwiperSlide>
-            <img src={Img3} />
-          </SwiperSlide>
+              <Swiper className="mySwiper"
+                modules={[Pagination, Mousewheel, Navigation]}
+                pagination={{ clickable: true }}
+                thumbs={true}
+                mousewheel={{
+                  forceToAxis: true
+                }}
+                navigation={true}
+                onRealIndexChange={clickSound}
+              >
+                <SwiperSlide>
+                  <img src={Img1} />
+                </SwiperSlide>
 
-          <SwiperSlide>
-            <img src={Img4} />
-          </SwiperSlide>
+                <SwiperSlide>
+                  <img src={Img2} />
+                </SwiperSlide>
+              </Swiper>
 
-          <SwiperSlide>
-            <img src={Img5} />
-          </SwiperSlide>
-        </Swiper>
+              <p className="caption">
+                Close Ups
+              </p>
 
-        <p className="caption">
-          Wow, much abandonment to be had here!
-        </p>
+              <Swiper className="mySwiper space"
+                modules={[Pagination, Mousewheel, Navigation]}
+                pagination={{ clickable: true }}
+                thumbs={true}
+                mousewheel={{
+                  forceToAxis: true
+                }}
+                navigation={true}
+                onRealIndexChange={clickSound}
+              >
+                <SwiperSlide>
+                  <img src={Img3} />
+                </SwiperSlide>
 
-      </section>
+                <SwiperSlide>
+                  <img src={Img4} />
+                </SwiperSlide>
 
-      <section className="mixed">
+                <SwiperSlide>
+                  <img src={Img5} />
+                </SwiperSlide>
+              </Swiper>
 
-        <h2>The Mixed Bunch</h2>
+              <p className="caption">
+                Wow, much abandonment to be had here!
+              </p>
 
-        <Swiper className="mySwiper" 
-          modules={[Pagination, Mousewheel, Navigation]} 
-          pagination={{clickable: true}}
-          thumbs={true}
-          mousewheel = {{
-            forceToAxis: true
-          }}
-          navigation={true}
-          onRealIndexChange={clickSound}
-          >
-          <SwiperSlide>
-            <img src={Img6} />
-          </SwiperSlide>
+            </section>
 
-          <SwiperSlide>
-            <img src={Img7} />
-          </SwiperSlide>
-        </Swiper>
+            <section className="mixed">
 
-        <p className="caption">
-          More closeups!
-        </p>
+              <h2>The Mixed Bunch</h2>
 
-        <Swiper className="mySwiper space" 
-          modules={[Pagination, Mousewheel, Navigation]} 
-          pagination={{clickable: true}}
-          thumbs={true}
-          mousewheel = {{
-            forceToAxis: true
-          }}
-          navigation={true}
-          onRealIndexChange={clickSound}
-          >
-          <SwiperSlide>
-            <img src={Img8} />
-          </SwiperSlide>
+              <Swiper className="mySwiper"
+                modules={[Pagination, Mousewheel, Navigation]}
+                pagination={{ clickable: true }}
+                thumbs={true}
+                mousewheel={{
+                  forceToAxis: true
+                }}
+                navigation={true}
+                onRealIndexChange={clickSound}
+              >
+                <SwiperSlide>
+                  <img src={Img6} />
+                </SwiperSlide>
 
-          <SwiperSlide>
-            <img src={Img9} />
-          </SwiperSlide>
+                <SwiperSlide>
+                  <img src={Img7} />
+                </SwiperSlide>
+              </Swiper>
 
-          <SwiperSlide>
-            <img src={Img10} />
-          </SwiperSlide>
-        </Swiper>
+              <p className="caption">
+                More closeups!
+              </p>
 
-        <p className="caption">
-          Grandma said she wished me well - I said, I have indoor plumbing
-        </p>
+              <Swiper className="mySwiper space"
+                modules={[Pagination, Mousewheel, Navigation]}
+                pagination={{ clickable: true }}
+                thumbs={true}
+                mousewheel={{
+                  forceToAxis: true
+                }}
+                navigation={true}
+                onRealIndexChange={clickSound}
+              >
+                <SwiperSlide>
+                  <img src={Img8} />
+                </SwiperSlide>
 
-      </section>
+                <SwiperSlide>
+                  <img src={Img9} />
+                </SwiperSlide>
 
-    </main>
+                <SwiperSlide>
+                  <img src={Img10} />
+                </SwiperSlide>
+              </Swiper>
+
+              <p className="caption">
+                Grandma said she wished me well - I said, I have indoor plumbing
+              </p>
+
+            </section>
+
+          </main>
+
+      }
+
+    </>
   )
 }
 

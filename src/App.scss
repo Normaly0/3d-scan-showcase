@@ -4,7 +4,9 @@
   }
 }
 
-#root {
+@import './reset.scss';
+
+.container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 1rem;
@@ -62,6 +64,7 @@
     height: 10px;
 
     outline: 2px solid black;
+    background: rgb(133, 133, 133);
     opacity: 1;
   }
 
@@ -123,23 +126,23 @@ section {
   flex-direction: column;
   justify-content: center;
 
-  background-color: white;
-
   box-shadow:
       -5px 0 0 0 black,
       5px 0 0 0 black,
       0 -5px 0 0 black,
       0 5px 0 0 black,
-      0px 10px rgb(160, 160, 160);
+      0px 10px rgb(141, 141, 141);
 
-  &::after {
+  &::before {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: -1;
 
+    background-color: white;
     box-shadow: inset -5px -5px rgb(202, 202, 202);
   }
 
@@ -156,7 +159,7 @@ section {
       8px 0 0 0 black,
       0 -8px 0 0 black,
       0 8px 0 0 black,
-      0px 15px rgb(160, 160, 160);
+      0px 15px rgb(141, 141, 141);
 
     &::after {
       box-shadow: inset -8px -8px rgb(202, 202, 202);

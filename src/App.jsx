@@ -24,7 +24,7 @@ import Click from './assets/click.mp3';
 
 function App() {
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   function clickSound() {
 
@@ -41,13 +41,13 @@ function App() {
       {
         loading
           ? 
-          <main>
-            <div className="loading">
+          <main className="loading">
+            <div>
               <p>Loading</p>
             </div>
           </main>
           : 
-          <main className="App">
+          <main className="container">
 
             <h1>Photogrammetry Adventures!</h1>
 

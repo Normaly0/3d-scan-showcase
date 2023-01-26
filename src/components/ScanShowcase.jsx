@@ -2,27 +2,27 @@ import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Mousewheel, Navigation } from 'swiper';
 
-import './App.scss';
+import './ScanShowcase.scss';
 
 import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import Img1 from './assets/Abandoned_All.webp';
-import Img2 from './assets/Abandoned_All_Studio.webp';
-import Img3 from './assets/Abandoned_Closeup_1.webp';
-import Img4 from './assets/Abandoned_Closeup_2.webp';
-import Img5 from './assets/Abandoned_Closeup_3.webp';
+import Img1 from '../assets/Abandoned_All.webp';
+import Img2 from '../assets/Abandoned_All_Studio.webp';
+import Img3 from '../assets/Abandoned_Closeup_1.webp';
+import Img4 from '../assets/Abandoned_Closeup_2.webp';
+import Img5 from '../assets/Abandoned_Closeup_3.webp';
 
-import Img6 from './assets/Mixed_All.webp';
-import Img7 from './assets/Mixed_All_Studio.webp';
-import Img8 from './assets/Mixed_Closeup_1.webp';
-import Img9 from './assets/Mixed_Closeup_2.webp';
-import Img10 from './assets/Mixed_Closeup_3.webp';
+import Img6 from '../assets/Mixed_All.webp';
+import Img7 from '../assets/Mixed_All_Studio.webp';
+import Img8 from '../assets/Mixed_Closeup_1.webp';
+import Img9 from '../assets/Mixed_Closeup_2.webp';
+import Img10 from '../assets/Mixed_Closeup_3.webp';
 
-import Click from './assets/click.mp3';
+import Click from '../assets/click.mp3';
 
-function App() {
+function ScanShowcase() {
 
   const [loading, setLoading] = useState(false);
 
@@ -47,11 +47,11 @@ function App() {
             </div>
           </main>
           : 
-          <main className="container">
+          <main className="scan-container">
 
             <h1>Photogrammetry Adventures!</h1>
 
-            <section className="abandoned">
+            <section className="abandoned border-retro">
 
               <h2>
                 The Abandonment Pack
@@ -109,7 +109,7 @@ function App() {
 
             </section>
 
-            <section className="mixed">
+            <section className="mixed border-retro">
 
               <h2>The Mixed Bunch</h2>
 
@@ -173,4 +173,4 @@ function App() {
   )
 }
 
-export default App
+export default ScanShowcase

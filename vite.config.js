@@ -8,7 +8,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
     }
   } else {
     return {
-      base: 'https://normaly.net/3d-scan',
+      // base: 'https://normaly.net/3d-scan',
       plugins: [react()]
     }
   }

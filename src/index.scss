@@ -47,7 +47,7 @@
   background-color: #f5f5f5;
   background: linear-gradient(0deg, #d1d1d1, #ffff);
 
-  background-image: url(./assets/background.png);
+  background-image: url(./assets/background.webp);
   background-size: 115px;
 
   animation: animback;
@@ -126,16 +126,10 @@ h1 {
   font-family: 'Forward';
   font-size: 24px;
   line-height: 37px;
-  margin-bottom: 30px;
-
-  @include breakpoint(585px) {
-    margin-bottom: 50px;
-  }
 
   @include breakpoint(890px) {
     font-size: 40px;
     line-height: 45px;
-    margin: 50px 0 80px 0;
   }
 }
 
@@ -150,4 +144,61 @@ h2 {
     font-size: 28px;
     line-height: 45px;
   }
+}
+
+p {
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 20px;
+
+  @include breakpoint(890px) {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+.border-retro {
+
+  position: relative;
+  padding: 20px;
+
+  box-shadow:
+    -5px 0 0 0 black,
+    5px 0 0 0 black,
+    0 -5px 0 0 black,
+    0 5px 0 0 black,
+    0px 10px rgb(141, 141, 141);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+
+    background-color: white;
+    box-shadow: inset -5px -5px rgb(202, 202, 202);
+  }
+
+
+  @include breakpoint(890px) {
+
+    padding: 30px;
+
+    box-shadow:
+      -8px 0 0 0 black,
+      8px 0 0 0 black,
+      0 -8px 0 0 black,
+      0 8px 0 0 black,
+      0px 15px rgb(141, 141, 141);
+
+    &::before {
+      box-shadow: inset -8px -8px rgb(202, 202, 202);
+    }
+
+  }
+
 }

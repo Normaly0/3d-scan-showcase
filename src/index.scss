@@ -1,22 +1,12 @@
-@font-face {
-  font-family: 'Press Start';
-  src: url(./assets/fonts/PressStart2P-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'Karmatic';
-  src: url(./assets//fonts/ka1.ttf);
-}
+@import './reset.scss';
+@import './utilities.scss';
 
 @font-face {
   font-family: 'Forward';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
   src: url(./assets/fonts/FFFFORWA.TTF);
-}
-
-@mixin breakpoint($width) {
-  @media (min-width: $width) {
-    @content;
-  }
 }
 
 @keyframes animback {
@@ -152,7 +142,6 @@ p {
   line-height: 20px;
 
   @include breakpoint(890px) {
-    margin-top: 10px;
     font-size: 20px;
     line-height: 25px;
   }

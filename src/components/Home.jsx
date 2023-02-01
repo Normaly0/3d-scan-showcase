@@ -19,8 +19,8 @@ function Home() {
 
             <div className="home-container__construction border-retro">
                 <div className="home-container__construction-img">
-                    <img src={ConstructionSign} />
-                    <img src={ConstructionBar} />
+                    <img src={ConstructionSign} alt=""/>
+                    <img src={ConstructionBar} alt=""/>
                 </div>
                 <p>Oh oh, seems like someone should add some content here huh...?</p>
             </div>
@@ -30,8 +30,8 @@ function Home() {
                     In the meantime, maybe you should click on one of these!
                 </p>
                 <div className="home-container__subpages-link">
-                    <Link to={'/3d-scan'}>
-                        <img src={CameraIcon}/>
+                    <Link to={'/3d-scan'} aria-label="Photogrammetry Showcase">
+                        <img src={CameraIcon} alt=""/>
                     </Link>
                 </div>
             </div>

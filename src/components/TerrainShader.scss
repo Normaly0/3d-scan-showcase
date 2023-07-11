@@ -1,0 +1,16 @@
+@mixin breakpoint($width) {
+    @media (min-width: $width) {
+      @content;
+    }
+}
+
+.canvas {
+    height: calc(100vh - 40px);
+    width: 100vw;
+
+    background: black;
+
+    @include breakpoint(890px) {
+        height: calc(100vh - 50px);
+    }
+}

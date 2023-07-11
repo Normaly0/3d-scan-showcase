@@ -11,11 +11,16 @@
     "copy": "cp ./404.html ./dist"
   },
   "dependencies": {
+    "@react-three/drei": "^9.78.1",
+    "@react-three/fiber": "^8.13.4",
+    "@react-three/postprocessing": "^2.14.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.7.0",
     "sass": "^1.57.1",
-    "swiper": "^8.4.6"
+    "swiper": "^8.4.6",
+    "three": "^0.154.0",
+    "vite-plugin-glsl": "^1.1.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

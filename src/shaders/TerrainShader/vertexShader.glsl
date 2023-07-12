@@ -3,7 +3,7 @@ uniform mat4 viewMatrix;
 uniform mat4 projectionMatrix;
 
 uniform float uTime;
-uniform float uLevels;
+uniform float uScale;
 
 attribute vec3 position;
 attribute vec2 uv;
@@ -54,7 +54,7 @@ float cnoise(vec2 P) {
 
 void main() {
 
-    float factor = floor((cnoise(vec2(position.x + uTime * 0.05, position.y + uTime * 0.05) * 2.0) + 0.9) * 4.0) / 4.0;
+    float factor = floor((cnoise(vec2(position.x + uTime * 0.05, position.y + uTime * 0.05) * uScale) + 0.9) * 4.0) / 4.0;
     // float factor = floor((cnoise(vec2(position.x, position.y) * 2.0) + 0.9) * 4.0) / 4.0;
 
     vec3 displacedPosition = vec3(

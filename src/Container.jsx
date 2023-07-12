@@ -1,15 +1,11 @@
 import { lazy } from 'react';
-import { Routes, Route, useLocation } from  'react-router-dom';
+import { Routes, Route } from  'react-router-dom';
 
 import Home from './components/Home';
 import ScanShowcase from './components/ScanShowcase';
 const TerrainShader = lazy(() => import('./components/TerrainShader'));
 
 function Container() {
-
-  const route = useLocation();
-
-  console.log(route.pathname)
 
   return (
     <Routes>

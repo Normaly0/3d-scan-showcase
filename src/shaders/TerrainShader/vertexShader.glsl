@@ -1,7 +1,9 @@
 uniform mat4 modelMatrix;
 uniform mat4 viewMatrix;
 uniform mat4 projectionMatrix;
+
 uniform float uTime;
+uniform float uLevels;
 
 attribute vec3 position;
 attribute vec2 uv;

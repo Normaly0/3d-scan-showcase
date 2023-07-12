@@ -1,4 +1,5 @@
-import { useRef } from 'react';
+import { useRef } from 'react'; 
+import { useControls } from 'leva'
 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
@@ -12,7 +13,15 @@ import './TerrainShader.scss';
 
 function TerrainShader() {
 
-
+    const { Levels } = useControls({
+        Levels: {
+            value: 2.0,
+            min: 0.1,
+            max: 5.0,
+            step: 0.1,
+          },
+        
+    })
 
     return (
         <div className="canvas">
@@ -20,7 +29,7 @@ function TerrainShader() {
                 camera={{
                     position: [0.25, - 0.25, 1]
                 }}
-                >
+            >
 
                 <color args={['black']} attach="background" />
 
@@ -33,7 +42,9 @@ function TerrainShader() {
                 </EffectComposer>
 
                 <OrbitControls />
-                <Scene />
+                <Scene 
+                    levels={Levels}
+                />
 
             </Canvas>
         </div>
@@ -43,26 +54,27 @@ function TerrainShader() {
 export default TerrainShader;
 
 
-function Scene() {
+function Scene(props) {
 
-    const meshRef = useRef();
+    const materialRef = useRef();
 
     const uniforms = {
         uTime: {value: 0}
     }
 
-    useFrame((e) => {
-        meshRef.current.material.uniforms.uTime.value = e.clock.elapsedTime;
+    useFrame(({clock}) => {
+        materialRef.current.uniforms.uTime.value = clock.getElapsedTime();
     })
 
     return (
-        <mesh ref={meshRef}>
+        <mesh>
             <planeGeometry args={[1, 1, 128, 128]} />
             <rawShaderMaterial 
                 vertexShader={vertexShader} 
                 fragmentShader={fragmentShader}
                 uniforms={uniforms}
                 side={2}
+                ref={materialRef}
             />
         </mesh>
     )
